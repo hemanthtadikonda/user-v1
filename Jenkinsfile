@@ -1,3 +1,5 @@
 @Library('roboshop') _
 
-demo ()
+env.component == "user"
+env.codeType == "nodejs"
+cipipeline ()
