@@ -40,6 +40,11 @@ spec:
             - name: http
               containerPort: {{ .Values.service.port }}
               protocol: TCP
+          env:
+            -  name: MONGO_URL
+               value: "mongodb://mongodb:27017/users"
+            -  name: REDIS_HOST
+               value: 'redis'
           livenessProbe:
             {{- toYaml .Values.livenessProbe | nindent 12 }}
           readinessProbe:
